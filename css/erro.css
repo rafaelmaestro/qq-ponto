@@ -1,0 +1,51 @@
+body {
+    background-image: url('/cc/back.jpg') ;
+}
+
+
+.imagem {
+    
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.texto {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+img {
+    margin-bottom: 0px;
+    left: 500px;
+    width: 200px;
+    height: 200px;
+    
+}
+
+h1 {
+    color: #ffff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0px;
+}
+
+h3 {
+    color: #ffff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    width: 1000px;
+}
+
+p {
+    position: relative;
+    top: 80px;
+    color: #ffff;
+}

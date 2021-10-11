@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <!DOCTYPE html>
+    <meta charset="utf-8" />
+    <title>QQPonto - Login</title>
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <link rel="shortcut icon" href="../projeto/favicon.ico" >
+</head>
+
+<body>
+    <br>
+    <div class="logo">
+        <img src="/cc/todaslogos1.png" title="" alt="">
+    </div>
+        <form class="box" action="" method="POST">
+            <fieldset>
+            <legend>Faça login</legend>
+            <input  pattern="[0-9]{6}" type="text" maxlength="6"
+            onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;"
+            name="matricula" placeholder="Matrícula">
+            <input type="password" maxlength="155"
+            name="senha" placeholder="Senha" required>
+            <input type="submit" name="" value="Login">
+            </fieldset>
+        </form>
+</body>
+<script src="/js/javascript.js"></script>
+
+</html>

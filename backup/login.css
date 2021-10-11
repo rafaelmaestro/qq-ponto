@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #0E2916;
+}
+.logo {
+/* LOGOQQPONTO */
+
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+
+}
+.box {
+    margin:0;
+}
+/* box dos inputs */
+.box input[type = "text"],.box input[type = "password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #ffffff;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+/* muda de cor se digitar menos que 6 digitos na matricula*/
+.box input[type = "text"]:invalid{
+    width: 200px;
+    border-color: #ff0000;
+}
+
+/* troca de cor quando seleciona*/
+.box input[type = "text"]:focus,.box input[type = "password"]:focus {
+    width: 200px;
+    border-color: #60FF00;
+}
+
+/*estilo do botão submit*/
+
+.box input[type = "submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #60FF00;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+/* mudar cor quando passa cursor*/
+
+.box input[type = "submit"]:hover{
+    background: #60FF00;
+}
+/*fieldset*/
+
+.box fieldset{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #ffffff;
+    padding: 14px 70px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}

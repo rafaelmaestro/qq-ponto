@@ -1,0 +1,666 @@
+
+nav {
+    position: static;
+    top: 0;
+}
+
+:root {
+    --cor-fundo:#E4E4E4;
+    --cor-hover: #60FF00;
+    --cor-primaria: #629C44;
+}
+
+.dp-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dp-menu ul {
+    background-color: var(--cor-fundo);
+}
+
+.dp-menu ul li {
+    display: inline;
+    position: relative;
+    left: 0%;
+}
+
+.dp-menu ul li a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px;
+    margin-left: 20px;
+    transition: background .3s;
+    border-radius: 200px;
+}
+
+.dp-menu ul li#senha {
+    left: 399px;
+}
+
+
+.dp-menu ul li a:hover {
+    background-color: var(--cor-hover);
+    border-radius: 200px;
+}
+
+/*sub menu*/
+.dp-menu ul ul {
+    display: none;
+    left: 0;
+    position: absolute;
+}
+
+.dp-menu ul li:hover ul {
+    display: block;
+}
+
+.dp-menu ul ul {
+    width: 150px
+}
+
+.dp-menu ul ul li a {
+    display: block;
+}
+
+.dp-menu ul li a svg {
+    width: 80px;
+    height: 18px;
+}
+
+.dp-menu ul img {
+    margin-left: 0;
+}
+
+.dp-menu span {
+    background-color: #E4E4E4;
+    text-align: center;
+    padding-top: 23;
+    padding-bottom: 27;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1px 20px 20px 1px;
+
+}
+
+.btn btn-primary {
+    background-color: none;
+    width: 0px;
+    height: 0px;
+}
+
+/* Body */
+
+body {
+    background-image: url('/cc/background1.png') ;
+}
+/* Saudação inicial */
+h1 {
+    color: #ffff;
+    font-size: medium;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+/* Botão para mudar apelido */
+#apelido {
+    border: 0;
+    background: none;
+    position: absolute;
+    left: 94%;
+    margin: 0;
+    top: 20;
+    text-align: center;
+    border: 0px;
+    padding: 0;
+    color: var(--cor-primaria);
+    border-radius: 100px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+#apelido:hover {
+    color: var(--cor-hover);
+
+}
+
+#apelido svg {
+    width: 100px;
+    height: 30px;
+}
+/* Tela inicial */
+#telaInicial {
+    display: block;
+}
+
+#inicial fieldset {
+    border: 0;
+    background: none;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    text-align: center;
+    border: 1px solid #ffffff;
+    padding: 220px 80px;
+    width: 400px;
+    height: 0px;
+    outline: none;
+    color: white;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+/* logo relogio  */
+#inicial fieldset svg {
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #629C44;
+}
+/* hora e data atual */
+#data-hora {
+    position:absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    font-size: larger;
+    color: #629C44;
+}
+
+/* input de data e hora */
+#inicial .data [type = "datetime-local"] {
+    border: 0;
+    background: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 70;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #629C44;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #ffff;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#inicial textarea {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    padding: 14px 10px;
+    transform: translateX(-50%);
+    top: 160;
+    margin: auto;
+    border: 1px solid #629C44;
+    outline: none;
+    border-radius: 24px;
+    background: none;
+    color: #ffff;
+    text-align: start;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#inicial textarea::placeholder {
+    text-align: start;
+}
+/* botão de bater ponto  */
+.baterPonto button{
+    border: 0;
+    background: #60FF00;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    top: 350;
+    text-align: center;
+    border: 1px solid #629C44;
+    padding: 14px 40px;
+    outline: none;
+    color: #0E2916;
+    border-radius: 5px;
+    transition: 0.25s;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.baterPonto button:hover {
+    background: #ffff;
+}
+
+/* opcao radio  */
+.nomebotao {
+    position: absolute;
+
+}
+.input-option356 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+  .input-option356:after {
+    content: "";
+    clear: both;
+}
+
+  .radio1  {
+    border: 1px solid #629C44;
+    box-sizing: border-box;
+    float: inline-end;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-110%);
+    width: 100px;
+    top: 290;
+    margin: 0%;
+    border-radius: 25px;
+    background-color: none;
+    font-family: sans-serif;
+    font-size:small ;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+  
+  .radio1 + .radio2 {
+    margin-left: 120px;
+}
+  
+  .radio1 label, .radio2 label {
+    background: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+}
+  
+  .radio1 label span, .radio2 label span {
+    z-index: 1;
+}
+  .radio1 label input[type=radio], .radio2 label input[type=radio] {
+    all: unset;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+  .radio1 label input[type=radio]:checked {
+    background-color: #60FF00;
+    border-radius: 25px;
+    border: 1px solid #60FF00;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.radio1 label input[type=radio]:checked + span{
+    color: #0E2916;
+}
+
+.radio2  {
+    border: 1px solid red;
+    box-sizing: border-box;
+    float: inline-end;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-110%);
+    width: 100px;
+    top: 290;
+    margin: 0%;
+    border-radius: 25px;
+    background-color: none;
+    font-family: sans-serif;
+    font-size:small ;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+  
+  .radio2 label input[type=radio]:checked {
+    background-color: red;
+    border-radius: 25px;
+    border: 1px solid red;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.radio2 label input[type=radio]:checked + span{
+    color: #0E2916;
+}
+
+
+h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: medium;
+    font-family: sans-serif;
+    font-weight: bold;
+    top: 60px;
+}
+
+#tela2 fieldset {
+    border: 0;
+    background: none;
+    position: absolute;
+    backdrop-filter: blur(5px);
+    top: 23%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: left;
+    border: 1px solid #ffffff;
+    padding: 0px 0px;
+    width: 800px;
+    height: 470px;
+    outline: none;
+    color: white;
+    border-radius: 10px;
+    transition: 0.25s;
+    overflow: auto;
+}
+
+#tela2 fieldset::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#tela2 fieldset::-webkit-scrollbar
+{
+	width: 12px;
+    border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#tela2 fieldset::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: var(--cor-primaria);
+}
+
+.horasTotais {
+    background-color: none;
+    position: absolute;
+    top: 7px;
+    left: 45px;
+    font-family: sans-serif;
+    font-size: small;
+}
+
+#numHoras {
+    background-color:none;
+    position: absolute;
+    top: 7px;
+    left: 180px;
+    font-family: sans-serif;
+    color: var(--cor-primaria);
+    font-size: small;
+}
+
+#excluirPonto {
+    position: relative;
+    background-color:none;
+    height: 10px;
+    width: 200px;
+    top: 3px;
+    left: 590px;
+    text-align: center;
+}
+
+#excluirPonto label {
+    font-family: sans-serif;
+    font-size: small ;
+}
+
+#excluirPonto input {
+    margin: 0px 5px;
+    font-family: sans-serif;
+    width: 50px;
+    font-size: small ;
+    background: #e4e4e4;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid #FFFF;
+    outline: none;
+    color: var(--cor-primaria);
+    border-radius: 5px;
+    transition: 0.25s;
+    cursor: text;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#excluirPonto input::placeholder {
+    font-family: sans-serif;
+}
+
+#excluirPonto button {
+    font-family: sans-serif;
+    font-size: small ;
+    background: red;
+    text-align: center;
+    border: 1px solid ;
+    padding: 0;
+    color: #ffff;
+    border-radius: 100px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#excluirPonto button:hover {
+    color: red;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#excluirPonto button svg {
+    border-radius: 100px;
+}
+
+.linha {
+    border: 0;
+    border-top: 1px solid #ffff;
+    position: absolute;
+    top: 20px;
+    color: #ffff;
+}
+
+.relogio {
+    background-color: none;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    text-align: center;
+    color: #ffff;
+}
+
+.relogio svg{
+    text-align: center;
+    width: 30px;
+    height: 20px;
+}
+
+.areadetexto {
+    font-family: sans-serif;
+    width: 300px;
+    height: 10px;
+    padding: 14px 10px;
+    margin: auto;
+    border: 1px solid #629C44;
+    outline: none;
+    border-radius: 24px;
+    background: none;
+    color: black;
+    text-align: start;
+}
+
+.areadetexto::placeholder{
+    color: --cor-primaria
+}
+
+.areadetexto:hover {
+    border-color: red;
+}
+
+.modal-footer {
+
+    height: 55;
+}
+
+.modal-footer button {
+    background: none;
+    text-align: center;
+    border-color: var(--cor-primaria);
+    color: var(--cor-primaria);
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.modal-footer button:hover {
+    background: none;
+    text-align: center;
+    color: #ffff;
+    border-color: var(--cor-hover);
+    background-color:var(--cor-hover);
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.modal-footer button:focus{
+    background: none;
+    text-align: center;
+    color: #ffff;
+    border-color: var(--cor-hover);
+    background-color:var(--cor-hover);
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+
+.modal-body {
+    font-family: sans-serif;
+    color: var(--cor-primaria);
+}
+
+.modal-title {
+    font-family: sans-serif;
+    color: var(--cor-primaria)
+}
+
+.cabe {
+    border: 0;
+    border-top: 1px solid;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    color:var(--cor-primaria);
+}
+
+#cabeId {
+    position: absolute;
+    top: 50px;
+    left: 95px;
+    color: #ffff;
+    font-family: sans-serif;
+    font-size: small;
+    font-weight: bold;
+}
+
+#cabeData {
+    position: absolute;
+    top: 50px;
+    left: 350px;
+    color: #ffff;
+    font-family: sans-serif;
+    font-size: small;
+    font-weight: bold;
+}
+
+#cabeTipo {
+    position: absolute;
+    top: 50px;
+    left: 620px;
+    color: #ffff;
+    font-family: sans-serif;
+    font-size: small;
+    font-weight: bold;
+}
+
+
+#pontosRegistrados {
+    justify-content: center;
+    justify-items: center;
+    background-color: none;
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90px;
+    justify-content: center;
+    border: 0px;
+    padding: 0px;
+}
+
+#pontosRegistrados tr {
+    left: 50%;
+    justify-items: center;
+    background-color: none;
+    display: block;
+    margin: 3px 0px;
+    justify-content: center;
+    border: 1px solid #0E2916;
+    border-radius: 5px;
+    padding: 0px;
+    height:20px
+}
+
+#pontosRegistrados tr td {
+    text-align: center;
+    justify-content: center;
+    background-color:none;
+    width: 100px;
+    height: 300px;
+    display: inline;
+    position: static;
+    left: 0%;
+    margin: 100px;
+
+}
+
+#dadosPontos {
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    text-align:center;
+    background-color:none;
+    color: #ffff;
+    font-family: sans-serif;
+    font-size: smaller;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px;
+    transition: background .3s;
+    border: 0px;
+    margin: 10px;
+}
+
+
+.logobottom {
+    position: absolute;
+    top: 92%;
+    left: 90%;
+}
