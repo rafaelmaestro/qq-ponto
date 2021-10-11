@@ -201,7 +201,7 @@ app.post("/inicial/cadastro", isAuth, haveAccess, isAdmin, function(req, res) {
         matricula: req.body.matriculaCadastro,
         temacesso: true,
         nome: req.body.nomeCadastro,
-        senha: bcrypt.hashSync('quero123'),
+        senha: bcrypt.hashSync(req.body.senhaCadastro),
         isadm: false
     }).then(function(){console.log('Usuario cadastrado!')}).catch(function(e) { console.log('Erro ao enviar formulario ' + e)})
     res.sendFile(__dirname + "/html/inicial.html")
