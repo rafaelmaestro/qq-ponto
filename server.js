@@ -96,6 +96,12 @@ async function getMonthHours(user) {
     from projeto.pontos
     where funcionario_id = ${user}`)
 }
+
+async function getMonthHours2(user) {
+    return database.query(`(select 
+        (select sum(extract (epoch from data_ponto)) from projeto.pontos where "tipoPonto" = 'Saida' and funcionario_id = '${user}' AND EXTRACT('MONTH' FROM data_ponto) = EXTRACT('MONTH' FROM CURRENT_DATE) AND EXTRACT('YEAR' FROM data_ponto) = EXTRACT('YEAR' FROM CURRENT_DATE)) 
+        - (select sum(extract (epoch from data_ponto)) from projeto.pontos where "tipoPonto" = 'Entrada' and funcionario_id = '${user}' AND EXTRACT('MONTH' FROM data_ponto) = EXTRACT('MONTH' FROM CURRENT_DATE) AND EXTRACT('YEAR' FROM data_ponto) = EXTRACT('YEAR' FROM CURRENT_DATE))as seconds );`)
+}
 // ROTAS
 
 app.get('/dados', async function (req, res) {
@@ -123,7 +129,8 @@ app.post('/inicial/exportar',isAuth, async function (req, res) {
 })
 
 app.get('/horas', isAuth, async function (req, res) {
-    res.json(await getMonthHours(req.user.id))
+    res.json(await getMonthHours2(req.user.id))
+    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", await getMonthHours2(req.user.id))
 })
 
 app.get('/pontosreg' , isAuth, async (req, res) => {

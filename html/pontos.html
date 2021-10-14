@@ -115,13 +115,25 @@ crossorigin="anonymous"></script>
 async function horas() {
   const response = await fetch('/horas')
   const data = await response.json()
+  const response2 = await fetch('/pontosreg')
+  const data2 = await response2.json()
+  console.log(data[0][0].seconds)
+  console.log(data2)
+
+  let horas   = Math.floor(data[0][0].seconds / 3600) // get hours
+  let minutos = Math.floor((data[0][0].seconds - (horas * 3600)) / 60) // get minutes
+  let segundos = data[0][0].seconds - (horas * 3600) - (minutos * 60) //  get seconds
+  // add 0 if value < 10; Example: 2 => 02
+  if (horas   < 10) {horas   = "0"+horas}
+  if (minutos < 10) {minutos = "0"+minutos}
+  if (segundos < 10) {segundos = "0"+segundos} 
 
   var container = document.getElementById('numHoras')
   container.innerHTML = ''
-  if (data[0].length % 2 != 0) {
+  if (data2[0].length % 2 != 0) {
     container.innerHTML += `Existem Entrada(s) e/ou Saída(s) sem registro(s).`
   } else {
-    container.innerHTML += `${data[0][0].totalHoras.hours} horas e ${data[0][0].totalHoras.minutes} minutos.`
+    container.innerHTML += `${horas} horas e ${minutos} minutos.`
   }
 }
 
